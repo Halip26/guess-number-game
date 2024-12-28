@@ -30,6 +30,29 @@ The GUI version of the game is implemented in [gui_guess_number_game.py](gui_gue
 python gui_guess_number_game.py
 ```
 
+## Loading Background Music
+
+To enhance the gaming experience, you can add background music to the game. Download the background music from [Pixabay](https://pixabay.com/music/search/number%20game/) and save it in the project directory.
+
+### How to Load Music in Pygame
+
+1. Download the music file from the provided link.
+2. Save the music file in the same directory as your game scripts.
+3. Add the following code to your `gui_guess_number_game.py` to load and play the music:
+
+```python
+import pygame
+
+# Initialize Pygame mixer
+pygame.mixer.init()
+
+# Load the background music
+pygame.mixer.music.load('background_music.mp3')  # Replace with your music file name
+
+# Play the background music
+pygame.mixer.music.play(-1)  # -1 means the music will loop indefinitely
+```
+
 ## Game Rules
 
 1. The game randomly selects a number between 1 and 99.
